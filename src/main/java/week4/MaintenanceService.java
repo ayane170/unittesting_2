@@ -10,6 +10,6 @@ public class MaintenanceService {
     }
 
     public List<Integer> findMachinesToMaintain() {
-        throw new RuntimeException("First test, then implement findMachinesToMaintain");
+        return List.of();
     }
 }

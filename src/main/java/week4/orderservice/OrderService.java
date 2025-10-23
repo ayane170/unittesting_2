@@ -10,6 +10,11 @@ public class OrderService {
     }
 
     public void addToShoppingCart(Product product, int quantity) {
-        throw new RuntimeException("Not implemented yet");
+        if (productService.productIsAvailable(product, quantity)) {
+            shoppingCart.add(product, quantity);
+        }
+        else  {
+            throw new ProductNotAvailableException(product);
+        }
     }
 }
